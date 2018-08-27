@@ -19,6 +19,11 @@ config/icon="res://icon.png"
 window/size/width=600
 window/size/height=400
 
+[input]
+
+turbo=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777238,"unicode":0,"echo":false,"script":null)
+ ]
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

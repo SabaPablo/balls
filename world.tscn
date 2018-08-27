@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/world.gd" type="Script" id=1]
 [ext_resource path="res://entitys/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entitys/ball.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Label.gd" type="Script" id=4]
+[ext_resource path="res://entitys/ballon.tscn" type="PackedScene" id=5]
 
 [node name="world" type="Node2D" index="0"]
 
@@ -11,11 +12,16 @@ script = ExtResource( 1 )
 
 [node name="player" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="ball" parent="." index="1" instance=ExtResource( 3 )]
+[node name="ball" parent="." index="1" groups=[
+"oposition",
+] instance=ExtResource( 3 )]
 
 position = Vector2( 284.258, 78.7702 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="score" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
 
 [node name="TextEdit" type="TextEdit" parent="score" index="0"]
 
@@ -68,5 +74,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 4 )
+
+[node name="ballon" parent="." index="3" groups=[
+"macri",
+] instance=ExtResource( 5 )]
 
 
